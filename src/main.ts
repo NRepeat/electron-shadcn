@@ -26,7 +26,7 @@ function createWindow() {
     titleBarStyle: "hidden",
   });
   registerListeners(mainWindow);
-
+  mainWindow.webContents.openDevTools();
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
   } else {

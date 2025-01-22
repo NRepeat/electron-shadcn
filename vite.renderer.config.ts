@@ -1,4 +1,4 @@
-import path from "path";
+import path, { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import type { ConfigEnv, UserConfig } from "vite";
 import { defineConfig } from "vite";
@@ -29,6 +29,7 @@ export default defineConfig((env) => {
       preserveSymlinks: true,
       alias: {
         "@": path.resolve(__dirname, "./src"),
+        "@api": resolve(__dirname, "./src/api"),
       },
     },
     clearScreen: false,
